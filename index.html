@@ -1,0 +1,33 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+
+  <script>
+    (function () {
+      var destination = "https://pixel-perfect-picture-match-04.lovable.app";
+      var currentUrl = new URL(window.location.href);
+      var targetUrl = new URL(destination);
+
+      currentUrl.searchParams.forEach(function (value, key) {
+        targetUrl.searchParams.append(key, value);
+      });
+
+      targetUrl.hash = currentUrl.hash;
+
+      window.location.replace(targetUrl.toString());
+    })();
+  </script>
+</head>
+<body>
+  <p>
+    Redirecting...
+    <a href="https://pixel-perfect-picture-match-04.lovable.app">Click here if you are not redirected.</a>
+  </p>
+</body>
+</html>
